@@ -15,7 +15,7 @@ Rinkeby Details
 See rinkeby_deployment.txt for Contract address and other information
 
 Owner account address -
-0x6038c699e6bc985605d36819E10B722981a2D5cc
+0x7Ef674F56bc1be485FA083bdD93d549D943c3608
 
 Mint details on Etherscan
 Mint Tokens - Asset ID
