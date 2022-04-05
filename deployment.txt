@@ -1,0 +1,398 @@
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'SquareVerifier'
+   --------------------------
+   > transaction hash:    0xffa71e9933101327289aec24ffb9d14b1e65c449d04830391f5d9119452961ce
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x8D3a12067398adF7ab501d11166da07986A2c202
+   > block number:        7
+   > block timestamp:     1649156738
+   > account:             0x1A409462c166Eb106cAB236375AC41c273ebA532
+   > balance:             99.96409466
+   > gas used:            992467 (0xf24d3)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01984934 ETH
+
+
+   Deploying 'SolnSquareVerifier'
+   ------------------------------
+   > transaction hash:    0x45f22c400d308e48ac56efec38157bce3c54c7cfc23e5ea070cad9a64c4c4613
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xe880349e246F1737BABF8400b3593D701A20A7A4
+   > block number:        8
+   > block timestamp:     1649156739
+   > account:             0x1A409462c166Eb106cAB236375AC41c273ebA532
+   > balance:             99.89349868
+   > gas used:            3529799 (0x35dc47)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.07059598 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.09044532 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.09044532 ETH
+
+
+Contract: TestERC721Mintable
+    match erc721 spec
+      ✓ should return total supply (103ms)
+      ✓ should get token balance (172ms)
+      ✓ should return token uri (143ms)
+      ✓ should transfer token from one owner to another (893ms)
+    have ownership properties
+      ✓ should return contract owner
+      ✓ should fail minting when address is not contract owner (474ms)
+    have pausable properties
+      ✓ can pause and unpause (511ms)
+      ✓ should return pause status (45ms)
+      ✓ should fail minting when contract is paused (806ms)
+
+  Contract: Test SolnSquareVerifier
+    test token minting by providing solution
+      ✓ should mint token for correct proof (6559ms)
+      ✓ should not allow solution reuse (5631ms)
+      ✓ should not mint token for incorrect proof (3210ms)
+
+  Contract: Test SquareVerifier
+    test verification
+      ✓ should return true for correct proof (1081ms)
+      ✓ should return false for incorrect proof (1110ms)
+
+## ---------
+
+(base) santuroy@Santus-MacBook-Pro eth-contracts % truffle migrate --network rinkeby
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/SquareVerifier.sol
+> Compilation warnings encountered:
+
+    project:/contracts/SquareVerifier.sol:449:5: Warning: Function state mutability can be restricted to view
+    function addition(G2Point memory p1, G2Point memory p2) internal returns (G2Point memory r) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+> Artifacts written to /Users/santuroy/Udacity/Blockchain-nano/capstone-project/eth-contracts/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.11+commit.c082d0b4.Emscripten.clang
+
+WARNING: Ganache forking only supports EIP-1193-compliant providers. Legacy support for send is currently enabled, but will be removed in a future version _without_ a breaking change. To remove this warning, switch to an EIP-1193 provider. This error is probably caused by an old version of Web3's HttpProvider (or ganache < v7)
+
+eth_getBlockByNumber
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'rinkeby-fork'
+> Network id:      4
+> Block gas limit: 29970705 (0x1c95111)
+
+
+1_initial_migration.js
+======================
+eth_accounts
+net_version
+eth_getBlockByNumber
+eth_getBlockByNumber
+net_version
+eth_getBlockByNumber
+eth_estimateGas
+
+   Deploying 'Migrations'
+   ----------------------
+net_version
+eth_blockNumber
+eth_getBlockByNumber
+eth_estimateGas
+eth_getBlockByNumber
+eth_gasPrice
+eth_sendTransaction
+
+  Transaction: 0xb2fcc3f2a7b9152edda5a473e16a7ff9c9fedfc72d8569c579fb0abc7b0aaa1c
+  Contract created: 0x593111c76de1e2344de9f2d7b5223a280e4687cd
+  Gas usage: 226537
+  Block number: 10451295
+  Block time: Tue Apr 05 2022 17:37:14 GMT+0530 (India Standard Time)
+
+eth_getTransactionReceipt
+eth_subscribe
+eth_getCode
+eth_getTransactionByHash
+eth_getBlockByNumber
+eth_getBalance
+   > block number:        10451295
+   > block timestamp:     1649160434
+   > account:             0x3a59B9d754c7DBF49fe2617Aab2Dc73764d97d56
+   > balance:             0.115763802517872053
+   > gas used:            226537 (0x374e9)
+   > gas price:           2.500000036 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000566342508155332 ETH
+
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_estimateGas
+eth_getBlockByNumber
+eth_gasPrice
+eth_sendTransaction
+
+  Transaction: 0x98f3777ab53d424b20797c2865fb820a2fb49e1547d8226ab131e028e54cc96c
+  Gas usage: 45763
+  Block number: 10451296
+  Block time: Tue Apr 05 2022 17:37:14 GMT+0530 (India Standard Time)
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_subscribe
+   -------------------------------------
+   > Total cost:     0.000566342508155332 ETH
+
+eth_getBlockByNumber
+
+2_deploy_contracts.js
+=====================
+eth_accounts
+net_version
+eth_getBlockByNumber
+eth_getBlockByNumber
+net_version
+eth_getBlockByNumber
+eth_estimateGas
+
+   Deploying 'SquareVerifier'
+   --------------------------
+net_version
+eth_blockNumber
+eth_getBlockByNumber
+eth_estimateGas
+eth_getBlockByNumber
+eth_gasPrice
+eth_sendTransaction
+
+  Transaction: 0x05c1cb8a18a1154671a7db4cf0991d3f40fc4174bea4845239a5e7a489ba566a
+  Contract created: 0xa999fb70bf4b7b9edced5b3db90122145c0c2b59
+  Gas usage: 992467
+  Block number: 10451297
+  Block time: Tue Apr 05 2022 17:37:18 GMT+0530 (India Standard Time)
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_subscribe
+eth_getCode
+eth_getTransactionByHash
+eth_getBlockByNumber
+eth_getBalance
+   > block number:        10451297
+   > block timestamp:     1649160438
+   > account:             0x3a59B9d754c7DBF49fe2617Aab2Dc73764d97d56
+   > balance:             0.113168227487626094
+   > gas used:            992467 (0xf24d3)
+   > gas price:           2.500000029 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002481167528781543 ETH
+
+net_version
+eth_getBlockByNumber
+eth_getBlockByNumber
+net_version
+eth_getBlockByNumber
+eth_estimateGas
+
+   Deploying 'SolnSquareVerifier'
+   ------------------------------
+net_version
+eth_blockNumber
+eth_getBlockByNumber
+eth_estimateGas
+eth_getBlockByNumber
+eth_gasPrice
+eth_sendTransaction
+
+  Transaction: 0x81c1d676500adb0b97e1a3bf7da328e641f3b48b10fb21d9d2995e86fbe5b0e4
+  Contract created: 0x7ef674f56bc1be485fa083bdd93d549d943c3608
+  Gas usage: 3543599
+  Block number: 10451298
+  Block time: Tue Apr 05 2022 17:37:30 GMT+0530 (India Standard Time)
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_subscribe
+eth_getCode
+eth_getTransactionByHash
+eth_getBlockByNumber
+eth_getBalance
+   > block number:        10451298
+   > block timestamp:     1649160450
+   > account:             0x3a59B9d754c7DBF49fe2617Aab2Dc73764d97d56
+   > balance:             0.10430922989549252
+   > gas used:            3543599 (0x36122f)
+   > gas price:           2.500000026 gwei
+   > value sent:          0 ETH
+   > total cost:          0.008858997592133574 ETH
+
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_estimateGas
+eth_getBlockByNumber
+eth_gasPrice
+eth_sendTransaction
+
+  Transaction: 0x2e67d24bdd5a8cec0af4a92086e600eea32f225e7cf006d78074d9fccd879507
+  Gas usage: 28663
+  Block number: 10451299
+  Block time: Tue Apr 05 2022 17:37:31 GMT+0530 (India Standard Time)
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_subscribe
+   -------------------------------------
+   > Total cost:     0.011340165120915117 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.011906507629070449 ETH
+
+
+
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x44cb6e75349b4538b85d1a8a77c50ebc3a1ad5d7cba81c6341e29041f9ac074e
+   > Blocks: 1            Seconds: 13
+   > contract address:    0x593111c76DE1E2344De9F2d7B5223a280E4687cd
+   > block number:        10451303
+   > block timestamp:     1649160473
+   > account:             0x3a59B9d754c7DBF49fe2617Aab2Dc73764d97d56
+   > balance:             0.11576380251809859
+   > gas used:            226537 (0x374e9)
+   > gas price:           2.500000035 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000566342507928795 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000566342507928795 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'SquareVerifier'
+   --------------------------
+   > transaction hash:    0xd10c5e22c91c40e8ed18e641fe08bc342f7701b155aa9d60e1bc1abe48e74ea9
+   > Blocks: 1            Seconds: 9
+   > contract address:    0xA999fB70Bf4B7b9EdCEd5B3DB90122145C0c2B59
+   > block number:        10451305
+   > block timestamp:     1649160503
+   > account:             0x3a59B9d754c7DBF49fe2617Aab2Dc73764d97d56
+   > balance:             0.115649395016542648
+   > gas used:            992467 (0xf24d3)
+   > gas price:           2.500000034 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002481167533743878 ETH
+
+
+   Deploying 'SolnSquareVerifier'
+   ------------------------------
+   > transaction hash:    0x432112cc34212db307bccb2ac8fe39217872a70063aec53894a884d9db5cd117
+   > Blocks: 2            Seconds: 17
+   > contract address:    0x7Ef674F56bc1be485FA083bdD93d549D943c3608
+   > block number:        10451307
+   > block timestamp:     1649160534
+   > account:             0x3a59B9d754c7DBF49fe2617Aab2Dc73764d97d56
+   > balance:             0.104309229862316404
+   > gas used:            3543599 (0x36122f)
+   > gas price:           2.500000034 gwei
+   > value sent:          0 ETH
+   > total cost:          0.008858997620482366 ETH
+
+
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.011340165154226244 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.011906507662155039 ETH
+
+## ---- Opensea
+
+https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/11
+
+https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/22
+
+https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/33
+
+https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/44
+
+https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/55
+
+https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/66
+
+https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/77
+
+https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/88
+
+https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/99
+

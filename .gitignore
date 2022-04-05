@@ -1,0 +1,11 @@
+
+build/Release
+build/contracts
+build
+
+# Dependency directories
+node_modules/
+
+
+# dotenv environment variables file
+.env
