@@ -14,7 +14,7 @@ truffle test
 Rinkeby Details
 See rinkeby_deployment.txt for Contract address and other information
 
-Owner account address -
+contract address -
 0x7Ef674F56bc1be485FA083bdD93d549D943c3608
 
 Mint details on Etherscan
@@ -39,7 +39,7 @@ https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/88
 https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/99
 
 
-Sold House - Asset ID 11, 22,
+Sold House - Asset ID 11, 22, 33
 
 Deploying
 Create a .env file (in eth-contracts) with MNEMONIC & Infura ENDPOINT_KEY
