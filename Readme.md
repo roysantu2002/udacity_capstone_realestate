@@ -39,7 +39,7 @@ https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/88
 https://testnets.opensea.io/assets/0x7Ef674F56bc1be485FA083bdD93d549D943c3608/99
 
 
-Sold House - Asset ID 11, 22, 33
+Sold House - Asset ID 11, 22, 33, 44, 77
 
 Deploying
 Create a .env file (in eth-contracts) with MNEMONIC & Infura ENDPOINT_KEY
