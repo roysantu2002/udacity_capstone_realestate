@@ -22,7 +22,7 @@ contract('Test SolnSquareVerifier', accounts => {
         // using proof.json from 25**2 == 625 (correct)
         it('should mint token for correct proof', async () => {
             let tokenId = 101;
-            let tx = await this.contract.mintToken(
+            let tx = await this.contract.mintUREMToken(
                 tokenHolder,
                 tokenId,
                 ["0x0fc978f22d06a974d6316d985fa282b3a4a21e1d27e9c289fee9a22b12871312", "0x0fe05fa5fb235d548c4c1e62b7c876085ebbbe1f90f8d383182f1aab309257e7"],
@@ -42,7 +42,7 @@ contract('Test SolnSquareVerifier', accounts => {
 
         it('should not allow solution reuse', async () => {
             let tokenId = 201;
-            await this.contract.mintToken(
+            await this.contract.mintUREMToken(
                 tokenHolder,
                 tokenId,
                 ["0x0fc978f22d06a974d6316d985fa282b3a4a21e1d27e9c289fee9a22b12871312", "0x0fe05fa5fb235d548c4c1e62b7c876085ebbbe1f90f8d383182f1aab309257e7"],
@@ -54,7 +54,7 @@ contract('Test SolnSquareVerifier', accounts => {
 
             // can't reuse same solution
             await truffleAssert.reverts(
-                this.contract.mintToken(
+                this.contract.mintUREMToken(
                     tokenHolder,
                     tokenId+1,
                     ["0x0fc978f22d06a974d6316d985fa282b3a4a21e1d27e9c289fee9a22b12871312", "0x0fe05fa5fb235d548c4c1e62b7c876085ebbbe1f90f8d383182f1aab309257e7"],
@@ -71,7 +71,7 @@ contract('Test SolnSquareVerifier', accounts => {
         it('should not mint token for incorrect proof', async () => {
             let tokenId = 999;
             await truffleAssert.reverts(
-                this.contract.mintToken(
+                this.contract.mintUREMToken(
                     randomAcc,
                     tokenId,
                     ["0x2fe0382ba55fe351367fe334953c082fa1ccb0c326bd3553905736cf83568865", "0x28daa90a9d842c3bf00257f985e25efa4019897e64dcf834b955780a436528b5"],
